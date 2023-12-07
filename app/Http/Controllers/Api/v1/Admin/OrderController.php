@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\Api\v1;
+namespace App\Http\Controllers\Api\V1\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class ProductController extends Controller
+class OrderController extends Controller
 {
     /**
      * Display a listing of the resource.

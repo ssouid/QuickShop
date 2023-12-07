@@ -1,0 +1,31 @@
+<?php
+
+namespace App\Services;
+
+use App\Models\OrderDetail;
+
+class OrderDetailService 
+{
+    public function create($data)
+    {
+        $orderDetail = new OrderDetail();
+        $orderDetail->fill($data);
+        $orderDetail->save();
+    }
+
+ 
+    public function update($id, $data)
+    {
+        $orderDetail = OrderDetail::findOrFail($id);
+        $orderDetail->fill($data);
+        $orderDetail->save();
+
+    }
+  
+    public function dalete($id)
+    {
+         $orderDetail = OrderDetail::findOrFail($id);
+         $orderDetail->delete();
+    }
+
+}
