@@ -11,6 +11,8 @@ class OrderDetailService
         $orderDetail = new OrderDetail();
         $orderDetail->fill($data);
         $orderDetail->save();
+
+        return  $orderDetail;
     }
 
  
@@ -20,12 +22,16 @@ class OrderDetailService
         $orderDetail->fill($data);
         $orderDetail->save();
 
+        return  $orderDetail;
+
     }
   
     public function dalete($id)
     {
          $orderDetail = OrderDetail::findOrFail($id);
          $orderDetail->delete();
+
+         return  True;
     }
 
 }
